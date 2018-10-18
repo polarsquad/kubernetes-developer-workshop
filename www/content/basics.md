@@ -36,3 +36,25 @@ kubectl describe pod hello-world-app-746bb754dd-7z6cq
 # Follow Pod log output
 kubectl logs hello-world-app-746bb754dd-7z6cq -f
 ```
+
+## Manifests
+You can describe all Kubernetes _resources_ in YAML format and those are called "manifests". Storing the definitions in file is good, because then you can store them in version control, publish on internet etc.
+
+Here's example of Pod in yaml format:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: hello-world-app
+    image: polarsquad/hello-world-app:master
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 3000
+      protocol: TCP
+```
+
+You can create new Pod from that file, with command `kubectl apply -f my-pod.yml`.
+For more details what options you have in the `spec`, check [Kubernetes documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.12/#podspec-v1-core).
