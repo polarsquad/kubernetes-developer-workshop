@@ -15,6 +15,8 @@ kind: Pod
 metadata:
   # The unique name in the namespace for the Pod
   name: hello-world-app
+  labels:
+    name: hello-world-app
 spec:
   containers:
     # One or more containers what get deployed and managed together

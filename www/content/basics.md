@@ -24,9 +24,13 @@ Usually you need few basic commands:
 - `kubectl apply -f <some file>` - Create all _resources_ defined in the _file_ (more about this later)
 - `kubectl delete <resource type> <name>` - Delete _resource_ by _name_
 - `kubectl logs <pod name>` - View _Pod_ log output
+- `kubectl run <name> --image <image> <cmd>` - Run command in temporary container
 
 ## Few kubectl examples
 ```shell
+# Run container in cluster and move your terminal session into it
+kubectl run -i -t --rm temp --image ubuntu /bin/bash
+
 # List all pods in all namespaces
 kubectl get pods --all-namespaces
 
