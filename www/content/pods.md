@@ -4,7 +4,7 @@ weight: 4
 menu: true
 ---
 
-_Pod_ is a group of one or more tightly related containers that will run together on the same worker node and in the same Linux namespace(s).
+A _Pod_ is a group of one or more tightly related containers that will run together on the same worker node and in the same Linux namespace(s).
 Each _Pod_ has its own IP, Hostname, processes etc. running a single application and/or additional supporting processes, each running in its own container.
 _Pods_ are spread out on different worker nodes.
 

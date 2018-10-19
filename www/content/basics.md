@@ -5,17 +5,17 @@ menu: true
 ---
 
 ## Resource types
-There's multiple built in resource types, and you can [create more with custom resource types](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions), but usually few basic resources are enough to get started.
+There are multiple built-in resource types, and you can [create more with custom resource types](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions), but usually, a few basic resources are enough to get started.
 
 - `Pod` - One or more containers what are deployed and managed together
-- `Deployment` - Manage _Pod_ replica set and do rolling upgrade of _Pods_
+- `Deployment` - Manage _Pod_ replica set and do rolling a upgrade of _Pods_
 - `Service` - Group one or more _Pods_ together to be a single _Service_
 - `Ingress` - Exposes _Service_ to public access
 
-There's even more commands, check `kubectl --help` for more info.
+There are even more commands, check `kubectl --help` for more info.
 
 ## basics of kubectl
-`kubectl` is command line tool to manage Kubernetes. There's is various other open source CLI and GUI tools to do the same and more.
+`kubectl` is a command line tool to manage Kubernetes. There's is various other open source CLI and GUI tools to do the same and more.
 
 Usually you need few basic commands:
 
@@ -42,7 +42,7 @@ kubectl logs hello-world-app-746bb754dd-7z6cq -f
 ```
 
 ## Manifests
-You can describe all Kubernetes _resources_ in YAML format and those are called "manifests". Storing the definitions in file is good, because then you can store them in version control, publish on internet etc.
+You can describe all Kubernetes _resources_ in YAML format and those are called "manifests". Storing the definitions in a file is good because then you can store them in version control, publish on the internet etc.
 
 Here's example of Pod in yaml format:
 ```yaml

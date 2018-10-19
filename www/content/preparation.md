@@ -5,21 +5,24 @@ menu: true
 ---
 
 ## Install CLI
-First step is to install `kubectl` - Kubernetes CLI.
+First step is to install `kubectl` - the Kubernetes CLI.
 
 - Homebrew on Mac: `brew install kubernetes-cli`
 - Snap on Ubuntu: `sudo snap install kubectl --classic`
-- Windows and other: [https://kubernetes.io/docs/tasks/tools/install-kubectl/]()
+- Windows and other: [https://kubernetes.io/docs/tasks/tools/install-kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
 
 Ensure that `kubectl` is in your path
 ```shell
 kubectl version
+
+  Client Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.0", GitCommit:"0ed33881dc4355495f623c6f22e7dd0b7632b7c0", GitTreeState:"clean", BuildDate:"2018-09-28T15:20:58Z", GoVersion:"go1.11", Compiler:"gc", Platform:"darwin/amd64"}
+  The connection to the server localhost:8080 was refused - did you specify the right host or port?
 ```
 > NOTE: You might get connection error to localhost, ignore that for now
 
 ## Setup config
 
-To connect to our temporary Kubernetes cluster, you need to add cluster, context and credentials.
+To connect to our temporary Kubernetes cluster, you need to add a cluster, context, and credentials.
 
 ```shell
 # Create cluster config
@@ -44,7 +47,7 @@ kubectl get namespaces
   kube-system   Active   8h
 ```
 
-By default Kubernetes uses `default` namespace, but it's best practice to use separate namespaces for different things, because the namespace doesn't get full of pods and also later on you can control access by the namespaces.
+By default, Kubernetes uses `default` namespace, but it's best practice to use separate namespaces for different things because otherwise the namespace gets full of pods and is hard to manage and also, later on, you can control access by the namespaces.
 
 ```shell
 # Create new namespace
