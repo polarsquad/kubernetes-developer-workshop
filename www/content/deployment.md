@@ -9,8 +9,6 @@ _Deployment_ is a wrapper around the _Pod_ definition, which enables you to defi
 
 Here's example _Deployment_ manifest
 ```yaml
-
----
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
