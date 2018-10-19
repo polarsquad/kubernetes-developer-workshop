@@ -47,3 +47,31 @@ spec:
           cpu: 200m
           memory: 300Mi
 ```
+
+For more details what options you have in the `spec`, check [Kubernetes documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.12/#podspec-v1-core).
+
+You can create new _Pod_ from that file, with command
+```shell
+kubectl apply -f my-pod.yml
+
+  pod/my-pod created
+```
+
+After you have created the _Pod_, you can list pods, and see the newly created _Pod_ running
+```shell
+kubectl get pods -o wide
+
+  NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE
+  my-pod                             1/1     Running   0          7m    100.96.5.11   ip-172-20-80-5.eu-west-1.compute.internal
+```
+
+And if you still have the temporary container running (started with `kubectl run ...` command), you can call the _Pod_ with the internal IP
+
+```shell
+apt-get update && apt-get install -y curl
+  # ... package install output ...
+
+curl http://100.96.5.11:3000/api/version
+
+  {"commit":"2c93ffa5d271f595208d484fa273d718084f40ea","tag":"unknown"}
+```

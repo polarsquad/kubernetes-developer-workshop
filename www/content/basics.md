@@ -60,5 +60,4 @@ spec:
       protocol: TCP
 ```
 
-You can create new Pod from that file, with command `kubectl apply -f my-pod.yml`.
-For more details what options you have in the `spec`, check [Kubernetes documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.12/#podspec-v1-core).
+We'll explain this in the next section about _Pods_
