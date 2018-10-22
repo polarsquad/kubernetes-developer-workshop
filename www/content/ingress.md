@@ -8,8 +8,6 @@ Usually you want to expose some _Service_ to public internet. That you can do wi
 
 Here's example _Ingress_ manifest
 ```yaml
-
----
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:

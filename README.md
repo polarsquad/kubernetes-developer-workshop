@@ -1,7 +1,7 @@
 # kubernetes Developer Workshop
 This repository contains sources for Polar Squad [Kubernetes](https://kubernetes.io) Developer workshop guide and material.
 
-**You can view the material online at [https://polarsquad.github.io/kubernetes-developer-workshop]()**
+**You can view the material online at [https://polarsquad.github.io/kubernetes-developer-workshop](https://polarsquad.github.io/kubernetes-developer-workshop)**
 
 ## Development
 ** NOTE: You don't need to do these steps, [read the guide!](https://polarsquad.github.io/kubernetes-developer-workshop) These are only for developers who would like to run the guide locally.

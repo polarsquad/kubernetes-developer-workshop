@@ -22,6 +22,7 @@ kubectl version
 
 ### (optional) Install kubectx
 [kubectx](https://github.com/ahmetb/kubectx) provides handy `kubectx` and `kubens` commandline tools for switching contexts and namespaces
+
 - Homebrew on Mac: `brew install kubectx`
 - Other: [https://github.com/ahmetb/kubectx#installation](https://github.com/ahmetb/kubectx#installation)
 

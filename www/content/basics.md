@@ -11,6 +11,8 @@ There are multiple built-in resource types, and you can [create more with custom
 - `Deployment` - Manage _Pod_ replica set and do rolling a upgrade of _Pods_
 - `Service` - Group one or more _Pods_ together to be a single _Service_
 - `Ingress` - Exposes _Service_ to public access
+- `ConfigMap` - For application configuration
+- `Secret` - To store passwords, etc.
 
 There are even more commands, check `kubectl --help` for more info.
 
