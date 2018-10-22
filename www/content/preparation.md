@@ -26,20 +26,20 @@ kubectl version
 - Homebrew on Mac: `brew install kubectx`
 - Other: [https://github.com/ahmetb/kubectx#installation](https://github.com/ahmetb/kubectx#installation)
 
-## Setup config
+## Login to cluster
 
-To connect to our temporary Kubernetes cluster, you need to add a cluster, context, and credentials.
+Go to [https://login.k8s-demo.polarsquad.com](https://login.k8s-demo.polarsquad.com) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
+
+Test the connection to cluster is working, you should get list of namespaces
 
 ```shell
-# Create cluster config
-kubectl config set-cluster reaktor-workshop --insecure-skip-tls-verify=true --server=https://reaktor-workshop-master.polarsquad.com
-# Create authentication config
-kubectl config set-credentials reaktor-workshop --username=admin --password=<PASSWORD HERE>
-# Create context
-kubectl config set-context reaktor-workshop --user=reaktor-workshop --cluster reaktor-workshop
-kubectl config use-context reaktor-workshop
+kubectl get namespaces
+
+  NAME          STATUS   AGE
+  default       Active   8h
+  kube-public   Active   8h
+  kube-system   Active   8h
 ```
-> **ACTION: Ask the password from the workshop organiser!**
 
 ## Create namespace
 
@@ -61,6 +61,7 @@ kubectl create namespace $USER-test
 # By default, use the new namespace
 kubectl config set-context --current --namespace=$USER-test
 ```
+> ACTION: Windows users, you need to replace the `$USER` with your firstname
 
 Now you should see your new namespace and there should not be any pods running in the namespace
 
@@ -80,3 +81,5 @@ kubectl get pods
 
   No resources found.
 ```
+
+Good, you have empty namespace! [Now we're ready to learn basics »]({{< ref "basics.md" >}})

@@ -1,7 +1,7 @@
 ---
 title: Introduction
 weight: 1
-menu: true
+menu: false
 ---
 
 This [Kubernetes Developer workshop](https://polarsquad.github.io/kubernetes-developer-workshop) goal is to teach reader
