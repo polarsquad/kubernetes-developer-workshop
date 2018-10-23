@@ -18,7 +18,7 @@ publish: build
 	rm -rf .git; \
 	git init; \
 	git add -A; \
-	git commit -m 'update static site'; \
+	git commit -m 'update static site [ci skip]'; \
 	git push -f git@github.com:polarsquad/kubernetes-developer-workshop.git master:gh-pages;
 
 .DEFAULT_GOAL := build
