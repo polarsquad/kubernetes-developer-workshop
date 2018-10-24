@@ -44,3 +44,5 @@ kubectl apply -f ingress.yml
 Now you should be able to open [https://`your.name`.k8s-demo.polarsquad.com](https://your.name.k8s-demo.polarsquad.com) and see web page with Polar Squad logo!
 
 ![screenshot](/img/screenshot.png)
+
+Next it's time to learn [how to make updates to _Deployment_ »]({{< ref "updates.md" >}})
