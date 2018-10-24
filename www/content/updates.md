@@ -32,3 +32,5 @@ kubectl apply -f deployment.yml
 Now you should be able to open [https://`your.name`.k8s-demo.polarsquad.com](https://your.name.k8s-demo.polarsquad.com) and see our one eye Jeremy!
 
 ![Jeremy screenshot](/img/screenshot-jeremy.png)
+
+Next, let's try to [add _Secret_ to our service »]({{< ref "secrets.md" >}})
