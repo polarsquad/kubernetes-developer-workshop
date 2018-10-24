@@ -4,7 +4,7 @@ weight: 8
 menu: true
 ---
 
-Concratulations, now you have service running in Kubernetes!
+Congratulations, now you have service running in Kubernetes!
 
 Later on you want to update your service without any downtime. Kubernetes makes this easy for you!
 If you update the _Deployment_ and `kubectl apply -f deployment.yml`, Kubernetes start to make rolling upgrade, start and stop _Pods_ to reach the desired state.
