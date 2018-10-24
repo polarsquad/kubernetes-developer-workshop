@@ -30,15 +30,12 @@ kubectl version
 
 Go to [https://login.k8s-demo.polarsquad.com](https://login.k8s-demo.polarsquad.com) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
 
-Test the connection to cluster is working, you should get list of namespaces
+Test the connection to cluster is working
 
 ```shell
-kubectl get namespaces
+kubectl cluster-info
 
-  NAME          STATUS   AGE
-  default       Active   8h
-  kube-public   Active   8h
-  kube-system   Active   8h
+  Kubernetes master is running at https://api.k8s.polarsquad.com
 ```
 
 ## Create namespace
@@ -73,7 +70,6 @@ kubectl get namespaces
   ernoaapa-test   Active   7s
   kube-public     Active   8h
   kube-system     Active   8h
-  testing         Active   1h
 ```
 
 ```shell
