@@ -98,4 +98,19 @@ curl http://100.96.5.11:3000/api/version
 
 🎉 **_YAY!_ Our application is running and we can communicate with it!**
 
+### Viewing _Pod_ logs
+
+Quite commonly you want to view application log output, to analyse what is happening, debug some problem, etc.
+
+Kubernetes makes accessing logs super easy. You can view _Pod_ stdout with `kubectl logs` command
+```shell
+kubectl get pods
+
+# Copy pod name
+
+kubectl logs <pod name>
+
+# You should see the nodejs server started log line
+```
+
 But we want more than just running single containers, we want replication, we want easy updating. [And _Deployment_ resource provides all that »]({{< ref "deployment.md" >}})
