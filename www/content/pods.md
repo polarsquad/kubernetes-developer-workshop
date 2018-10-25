@@ -84,8 +84,8 @@ After you have created the _Pod_, you can list pods, and see the newly created _
 ```shell
 kubectl get pods -o wide
 
-  NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE
-  my-pod                             1/1     Running   0          7m    100.96.5.11   ip-172-20-80-5.eu-west-1.compute.internal
+  NAME               READY   STATUS    RESTARTS   AGE   IP            NODE
+  hello-world-app    1/1     Running   0          7m    100.96.5.11   ip-172-20-80-5.eu-west-1.compute.internal
 ```
 
 And if you still have the [debugging container running]({{< relref "basics.md#debugging-in-kubernetes" >}}), you can call the _Pod_ internal IP

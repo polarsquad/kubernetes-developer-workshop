@@ -9,25 +9,13 @@ menu: true
 
 Usually you need few basic commands:
 
+- `kubectl apply -f <some file>` - Create all _resources_ defined in the _file_
 - `kubectl get <resource type>` - List all the _resources_ of given _type_
 - `kubectl describe <resource type> <name>` - Show details about the resource
-- `kubectl apply -f <some file>` - Create all _resources_ defined in the _file_
 - `kubectl delete <resource type> <name>` - Delete _resource_ by _name_
 - `kubectl logs <pod name>` - View _Pod_ log output
 - `kubectl run <name> --image <image> <cmd>` - Start container and run cmd in it
 - `kubectl exec -i -t <name> <cmd>` - Run command in running container
-
-## Few kubectl examples
-```shell
-# List all pods in the namespace
-kubectl get pods
-
-# Show details about Pod
-kubectl describe pod hello-world-app-746bb754dd-7z6cq
-
-# Follow Pod log output
-kubectl logs hello-world-app-746bb754dd-7z6cq -f
-```
 
 ## Debugging in Kubernetes
 

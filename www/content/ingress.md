@@ -17,13 +17,16 @@ kind: Ingress
 metadata:
   name: hello-world-app
   annotations:
+    # Enable HTTPS to this endpoint
     kubernetes.io/tls-acme: "true"
 spec:
+  # Create and configure HTTPS certificate for the service
   tls:
   - hosts:
     - <your.name>.k8s-demo.polarsquad.com
     secretName: hello-world-app-tls
   rules:
+  # Route all incoming traffic to `hello-world-app` Service
   - host: <your.name>.k8s-demo.polarsquad.com
     http:
       paths:

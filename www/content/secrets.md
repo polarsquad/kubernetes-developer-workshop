@@ -20,7 +20,6 @@ type: Opaque
 data:
   # key & base64 encoded value pairs
   my-secret: eW91IGdvdCBpdCE=
-# ...
 
 ```
 Create the _Secret_
