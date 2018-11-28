@@ -55,8 +55,11 @@ By default, Kubernetes uses `default` namespace, but it's best practice to use s
 ```shell
 # Create new namespace
 kubectl create namespace $USER-test
-# By default, use the new namespace
-kubectl config set-context --current --namespace=$USER-test
+
+# Use the new namespace...
+kubectl config set-context $(kubectl config current-context) --namespace=$USER-test
+# ... or if you installed `kubectx`
+kubens $USER-test
 ```
 > ACTION: Windows users, you need to replace the `$USER` with your firstname
 
