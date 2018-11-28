@@ -28,14 +28,14 @@ kubectl version
 
 ## Login to cluster
 
-Go to [https://login.k8s-demo.polarsquad.com](https://login.k8s-demo.polarsquad.com) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
+Go to [https://login.demo-apps.polarsquad.com](https://login.demo-apps.polarsquad.com) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
 
 Test the connection to cluster is working
 
 ```shell
 kubectl cluster-info
 
-  Kubernetes master is running at https://api.k8s.polarsquad.com
+  Kubernetes master is running at https://api.demo-kube.polarsquad.com
 ```
 
 ## Create namespace

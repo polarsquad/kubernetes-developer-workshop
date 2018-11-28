@@ -23,11 +23,11 @@ spec:
   # Create and configure HTTPS certificate for the service
   tls:
   - hosts:
-    - <your.name>.k8s-demo.polarsquad.com
+    - <your.name>.demo-apps.polarsquad.com
     secretName: hello-world-app-tls
   rules:
   # Route all incoming traffic to `hello-world-app` Service
-  - host: <your.name>.k8s-demo.polarsquad.com
+  - host: <your.name>.demo-apps.polarsquad.com
     http:
       paths:
       - backend:
@@ -44,7 +44,7 @@ kubectl apply -f ingress.yml
   ingress/hello-world-app created
 ```
 
-Now you should be able to open [https://`your.name`.k8s-demo.polarsquad.com](https://your.name.k8s-demo.polarsquad.com) and see web page with Polar Squad logo!
+Now you should be able to open [https://`your.name`.demo-apps.polarsquad.com](https://your.name.demo-apps.polarsquad.com) and see web page with Polar Squad logo!
 
 ![screenshot](/img/screenshot.png)
 
