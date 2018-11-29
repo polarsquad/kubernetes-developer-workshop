@@ -77,7 +77,7 @@ Save that to `pod.yml` file and you can create new _Pod_ with command
 ```shell
 kubectl apply -f pod.yml
 
-  pod/my-pod created
+  pod/hello-world-app created
 ```
 
 After you have created the _Pod_, you can list pods, and see the newly created _Pod_ running
@@ -104,13 +104,17 @@ Quite commonly you want to view application log output, to analyse what is happe
 
 Kubernetes makes accessing logs super easy. You can view _Pod_ stdout with `kubectl logs` command
 ```shell
-kubectl get pods
-
-# Copy pod name
-
-kubectl logs <pod name>
+kubectl logs hello-world-app
 
 # You should see the nodejs server started log line
 ```
 
-But we want more than just running single containers, we want replication, we want easy updating. [And _Deployment_ resource provides all that »]({{< ref "deployment.md" >}})
+### Deleting _Pod_
+To stop the containers, you just delete the _Pod_ and Kubernetes take care of removing whole application
+```shell
+kubectl delete pod hello-world-app
+
+  pod/hello-world-app deleted
+```
+
+But we want more than just running single containers, we want replication, we want rolling updates. [And _Deployment_ resource provides all that »]({{< ref "deployment.md" >}})
