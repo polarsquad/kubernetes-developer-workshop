@@ -33,4 +33,6 @@ Now you should be able to open [https://`your.name`.demo-apps.polarsquad.com](ht
 
 ![Jeremy screenshot](/img/screenshot-jeremy.png)
 
-Next, let's try to [add _Secret_ to our service »]({{< ref "secrets.md" >}})
+
+The applications are rarely this simple, you depend on to other services.<br>
+[Let's create Redis service and test Service-to-Service communication »]({{< ref "communication.md" >}})
