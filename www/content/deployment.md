@@ -45,6 +45,7 @@ spec:
               cpu: 200m
               memory: 300Mi
           env:
+            # Pass some metadata to the application through environment variables
             - name: NAMESPACE
               valueFrom:
                 fieldRef:

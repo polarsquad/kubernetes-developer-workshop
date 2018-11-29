@@ -48,11 +48,8 @@ kubectl apply -f deployment.yml
 
 Now if you check the _Pods_ log output, you should see log line showing the secret
 ```shell
-kubectl get pods
-
-# Copy pod name
-
-kubectl logs <pod name>
+kubectl logs --selector app=hello-world-app
 
 # You should see the secret in the output
 ```
+> Note: Here we used `--selector` so we don't need to copy randomly generated _Pod_ name

@@ -47,28 +47,10 @@ spec:
         limits:
           cpu: 200m
           memory: 300Mi
-      # Pass some metadata to the application through environment variables
+      # Set some environment variables for the process
       env:
-        - name: NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        - name: POD_UID
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.uid
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
-        - name: POD_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.podIP
-        - name: HOST_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.hostIP
+        - name: MY_ENV
+          value: foobar
 ```
 
 For more details what options you have in the `spec`, check [Kubernetes documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.12/#podspec-v1-core).
@@ -91,9 +73,9 @@ kubectl get pods -o wide
 And if you still have the [debugging container running]({{< relref "basics.md#debugging-in-kubernetes" >}}), you can call the _Pod_ internal IP
 
 ```shell
-curl http://100.96.5.11:3000/api/version
+curl http://<pod ip>:3000/api/version
 
-  {"commit":"2c93ffa5d271f595208d484fa273d718084f40ea","tag":"unknown"}
+  {"commit":"2c93ffa5d271f595208d484fa273d718084f40ea","tag":"unknown", ....}
 ```
 
 🎉 **_YAY!_ Our application is running and we can communicate with it!**
@@ -114,7 +96,7 @@ To stop the containers, you just delete the _Pod_ and Kubernetes take care of re
 ```shell
 kubectl delete pod hello-world-app
 
-  pod/hello-world-app deleted
+  pod "hello-world-app" deleted
 ```
 
 But we want more than just running single containers, we want replication, we want rolling updates. [And _Deployment_ resource provides all that »]({{< ref "deployment.md" >}})

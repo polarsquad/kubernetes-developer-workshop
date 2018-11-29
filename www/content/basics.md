@@ -50,7 +50,7 @@ There are even more commands, check `kubectl --help` for more info.
 ## Manifests
 You can describe all Kubernetes _resources_ in YAML format and those are called "manifests". Storing the definitions in a file is good because then you can store them in version control, publish on the internet etc.
 
-Here's example of Pod in yaml format:
+Here's example of a _Pod_ in yaml format:
 ```yaml
 apiVersion: v1
 kind: Pod
