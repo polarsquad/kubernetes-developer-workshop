@@ -59,13 +59,14 @@ kubectl apply -f redis.yml
 
 Then we need to update our service to use the new Redis service. Our [hello-world-app](https://github.com/polarsquad/hello-world-app) uses Redis to persist data, if you pass `REDIS_URL` environment variable. Let's update the _Deployment_:
 ```yaml
-# deployment.yaml
-
-# ... snip ...
+# deployment.yml
+apiVersion: extensions/v1beta1
+kind: Deployment
+# ...
           env:
             - name: REDIS_URL
               value: redis://redis
-# ... snip ...
+# ...
 ```
 
 And update the _Deployment_

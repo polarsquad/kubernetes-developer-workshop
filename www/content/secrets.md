@@ -31,6 +31,8 @@ Next you need to map secret to environment variable
 
 ```yaml
 # deployment.yml
+apiVersion: extensions/v1beta1
+kind: Deployment
 # ...
           envs:
             - name: MY_SECRET

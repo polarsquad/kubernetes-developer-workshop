@@ -13,7 +13,7 @@ Here's updated _Deployment_ manifest file
 
 **note the image tag changed `master`->`jeremy`**
 ```yaml
-# ingress.yml
+# deployment.yml
 apiVersion: extensions/v1beta1
 kind: Deployment
 # ...
