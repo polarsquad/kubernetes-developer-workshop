@@ -29,7 +29,7 @@ Apply the change to the _Deployment_
 kubectl apply -f deployment.yml
 ```
 
-Now you should be able to open [https://`your.name`.demo-apps.polarsquad.com](https://your.name.demo-apps.polarsquad.com) and see our one eye Jeremy!
+Now you should be able to open [https://`your.name`.polarsquad.training](https://your.name.polarsquad.training) and see our one eye Jeremy!
 
 ![Jeremy screenshot](/img/screenshot-jeremy.png)
 

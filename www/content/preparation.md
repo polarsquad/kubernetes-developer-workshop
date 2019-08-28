@@ -28,7 +28,7 @@ kubectl version
 
 ## Login to cluster
 
-Go to [https://login.demo-apps.polarsquad.com](https://login.demo-apps.polarsquad.com) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
+Go to [https://login.polarsquad.training](https://login.polarsquad.training) if you're attending to Polar Squad Kubernetes workshop. If you're not attending to our workshop, ensure you have working cluster and you're authenticated.
 
 Test the connection to cluster is working
 
