@@ -5,9 +5,9 @@ menu: true
 ---
 
 Usually running single _Pod_ is not enough. You want to run multiple replications of it, update _Pods_ gracefully, etc. you want to use _Deployment_ resource.
-_Deployment_ is a wrapper around the _Pod_ definition, which enables you to define replication count and when you make changes to the Pod specification, it will take care of gracefully rolling the update so that there's no any downtime.
+_Deployment_ is a wrapper around the _Pod_ definition, which enables you to define replication count and when you make changes to the Pod specification, it will take care of gracefully rolling the update so that there's no downtime.
 
-Here's example _Deployment_ manifest file
+Here's an example _Deployment_ manifest file
 ```yaml
 # deployment.yml
 apiVersion: extensions/v1beta1

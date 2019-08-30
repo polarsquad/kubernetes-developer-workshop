@@ -8,7 +8,7 @@ A _Pod_ is a group of one or more tightly related containers that will run toget
 Each _Pod_ has its own IP, Hostname, processes etc. running a single application and/or additional supporting processes, each running in its own container.
 _Pods_ are spread out on different worker nodes.
 
-Here's example _Pod_ manifest file
+Here's an example _Pod_ manifest file
 ```yaml
 # pod.yml
 apiVersion: v1

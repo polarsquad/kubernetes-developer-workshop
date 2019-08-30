@@ -9,7 +9,7 @@ _Ingress_ resource allows inbound connections to reach the _Services_ running in
 
 Using _Ingress_ requires that you have configured your cluster to be accessable from Internet and ingress controller to be deployed to the cluster. This is specific to Kubernetes installation. If you need help, contact [Polar Squad](https://polarsquad.com) 😎
 
-Here's example _Ingress_ manifest file
+Here's an example _Ingress_ manifest file
 ```yaml
 # ingress.yml
 apiVersion: extensions/v1beta1

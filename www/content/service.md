@@ -6,7 +6,7 @@ menu: true
 
 To communicate with the _Pods_, internally in Kubernetes, or later expose it for public access, you need to somehow specify what _Pods_ belong together. And that you can do with _Service_. _Service_ takes `selector` what select _Pods_ by the labels.
 
-Here's example _Service_ manifest file
+Here's an example _Service_ manifest file
 ```yaml
 # service.yml
 apiVersion: v1

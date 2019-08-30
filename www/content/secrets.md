@@ -8,7 +8,7 @@ Of course all applications need some secrets like database passowrds, API keys, 
 
 Kubernetes provides _Secret_ resource to store the secrets and feed them to the application through environment variables when the _Pod_ starts.
 
-Here's example _Secret_ manifest file
+Here's an example _Secret_ manifest file
 
 ```yaml
 # secret.yml
