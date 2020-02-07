@@ -4,7 +4,7 @@ weight: 10
 menu: true
 ---
 
-Of course all applications need some secrets like database passowrds, API keys, etc.
+Of course all applications need some secrets like database passwords, API keys, etc.
 
 Kubernetes provides _Secret_ resource to store the secrets and feed them to the application through environment variables when the _Pod_ starts.
 
@@ -56,4 +56,4 @@ kubectl logs --selector app=hello-world-app
 ```
 > Note: Here we used `--selector` so we don't need to copy randomly generated _Pod_ name
 
-[Time to wrap up what we learned »]({{< ref "conclusion.md" >}})
+Let's add some deployment specific configurations [add _Configmap_ to our service »]({{< ref "configmaps.md" >}})
